@@ -1,8 +1,6 @@
 import { Link, Container, Navbar, Text } from "@nextui-org/react";
-import { Layout } from "@/components/Layout";
-import dynamic from "next/dynamic";
-
-const Survey = dynamic(() => import("@/components/Survey"), { ssr: false });
+import Layout from "@/components/Layout";
+import Survey from "@/components/Survey";
 export default function Home() {
   const toggleItems = ["Item1", "Item2", "Item3"];
   return (
@@ -10,7 +8,9 @@ export default function Home() {
       <Navbar isBordered height="139px">
         <Navbar.Content>
           <Container direction="column">
-            <Text h2>MakeupApp</Text>
+            <Text h2 size={30}>
+              MakeupApp
+            </Text>
             <Text>Estee Lauder</Text>
           </Container>
         </Navbar.Content>
