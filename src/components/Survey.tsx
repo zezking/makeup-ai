@@ -1,5 +1,5 @@
 import "survey-core/defaultV2.min.css";
-// import { surveyConfig } from "@/surveyConfig";
+import { surveyConfig } from "@/surveyConfig";
 import {
   Link,
   Container,
@@ -8,16 +8,6 @@ import {
   Button,
   Spacer,
 } from "@nextui-org/react";
-const surveyConfig = {
-  pages: [
-    {
-      type: "radiogroup",
-      name: "gender",
-      title: "What is your gender?",
-      choices: ["Female", "Male", "Don't want to say"],
-    },
-  ],
-};
 
 const Survey = () => {
   const elements = surveyConfig.pages[0];
@@ -27,7 +17,7 @@ const Survey = () => {
         <>
           <Button
             color={"primary"}
-            css={{ width: "200px" }}
+            css={{ width: "332px", height: "48px" }}
             auto
             rounded
             ghost
@@ -35,7 +25,7 @@ const Survey = () => {
           >
             {choice}
           </Button>
-          <Spacer y={1} />
+          <Spacer y={0.5} />
         </>
       );
     }
@@ -44,14 +34,22 @@ const Survey = () => {
 
   const controls = (
     <>
-      <Button auto bordered rounded size="lg">
+      <Button
+        auto
+        bordered
+        rounded
+        size="lg"
+        css={{ width: "158px", height: "64px" }}
+      >
         Back
       </Button>
-      <Button auto rounded size="lg">
+      <Spacer x={1} />
+      <Button auto rounded size="lg" css={{ width: "158px", height: "64px" }}>
         Next
       </Button>
     </>
   );
+
   return (
     <>
       <Container display="flex" direction="column" alignItems="center">

@@ -106,5 +106,11 @@ a {
   }
 }
 
-#surveyElement {
+/* Make height 100% of the browswer */
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: 100%;
 }
