@@ -6,5 +6,11 @@ export const surveyConfig = {
       title: "What is your gender?",
       choices: ["Female", "Male", "Don't want to say"],
     },
+    {
+      type: "radiogroup",
+      name: "skin type",
+      title: "what's your skin type",
+      choices: ["Normal", "Dry", "Sensitive", "Oily", "Combination"],
+    },
   ],
 };

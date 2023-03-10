@@ -1,7 +1,6 @@
 import { Link, Container, Navbar, Text, Image } from "@nextui-org/react";
 import Layout from "@/components/Layout";
 import Survey from "@/components/Survey";
-import "../styles/Home.module.css";
 export default function Home() {
   const toggleItems = ["Item1", "Item2", "Item3"];
   return (
@@ -40,6 +39,7 @@ export default function Home() {
           clipPath: "circle(100px at center)",
           height: "300px",
           marginTop: "-34px",
+          marginBottom: "-40px",
         }}
         src={"./profile.jpg"}
       />
